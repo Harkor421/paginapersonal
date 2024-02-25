@@ -1,0 +1,59 @@
+/* Reset default margin and padding */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #007aff; /* iOS blue color */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
+    background-color: #f7f7f7; /* Light gray background */
+    padding: 60px;
+    transition: transform 0.3s ease; /* Add transition for transform */
+}
+
+/* Hover animation */
+section:hover {
+    transform: scale(1.05); /* Scale up the section on hover */
+}
+
+footer {
+    background-color: #007aff; /* iOS blue color */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
