@@ -1,59 +1,128 @@
-/* Reset default margin and padding */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('VCR_OSD_MONO_1.001.ttf') format('truetype');
 }
 
-/* Basic styles */
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Press Start 2P', Arial, sans-serif; /* Apply the pixel font */
+    background: linear-gradient(to bottom right, #333, #000);
+    color: #fff;
 }
 
 header {
-    background-color: #007aff; /* iOS blue color */
-    color: #fff;
-    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center horizontally */
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    margin-top: 10px; /* Adjust margin as needed */
 }
 
 nav ul {
     list-style-type: none;
-    text-align: center;
-    padding: 10px;
+    padding: 0;
 }
 
 nav ul li {
     display: inline;
-    margin-right: 10px;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
 }
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: #333;
 }
 
-main {
-    padding: 20px;
-}
 
 section {
-    margin-bottom: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
-    background-color: #f7f7f7; /* Light gray background */
-    padding: 60px;
-    transition: transform 0.3s ease; /* Add transition for transform */
+    padding: 150px 20px; /* Increased padding for the "About Me" section */
+    text-align: center;
+    background: transparent; /* Remove individual background gradients */
 }
 
-/* Hover animation */
-section:hover {
-    transform: scale(1.05); /* Scale up the section on hover */
+section h2 {
+    margin-bottom: 50px;
 }
 
 footer {
-    background-color: #007aff; /* iOS blue color */
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
+
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    margin-top: 0;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icon-link {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.icon-link:hover {
+    transform: translateY(-3px);
+}
+
+.icon-link img {
+    width: 40px; /* Adjust icon size as needed */
+    height: auto;
+}
+
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-image {
+    margin-right: 20px; /* Adjust spacing between image and text */
+}
+
+.about-image img {
+    max-width: 100%; /* Ensure the image does not exceed its container */
+    height: auto;
+}
+
